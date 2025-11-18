@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Calculadora Científica</h1>
+    <p class="subtitle">Versión web basada en tu calculadora de Python</p>
+
+    <!-- SECCIÓN PASSWORD -->
+    <div class="card" id="password-section">
+        <div class="section-title">Acceso</div>
+        <label for="password-input">Ingresa la contraseña:</label>
+        <input type="password" id="password-input" placeholder="Escribe la contraseña">
+        <button id="btn-login">Ingresar</button>
+        <div id="password-message" class="small-text"></div>
+    </div>
+
+    <!-- SECCIÓN CALCULADORA -->
+    <div class="card hidden" id="calculator-section">
+        <div class="section-title">Operaciones</div>
+
+        <label for="operation-select">Elige una operación:</label>
+        <select id="operation-select">
+            <option value="suma">1. Sumar (a + b)</option>
+            <option value="resta">2. Restar (a - b)</option>
+            <option value="multiplicacion">3. Multiplicar (a × b)</option>
+            <option value="division">4. Dividir (a ÷ b)</option>
+            <option value="potencia">5. Potencia (a^b)</option>
+            <option value="raiz">6. Raíz cuadrada (√a)</option>
+            <option value="seno">7. Seno (grados de a)</option>
+            <option value="coseno">8. Coseno (grados de a)</option>
+            <option value="tangente">9. Tangente (grados de a)</option>
+            <option value="log10">10. Logaritmo base 10 (log₁₀(a))</option>
+            <option value="ln">11. Logaritmo natural (ln(a))</option>
+        </select>
+
+        <div class="row" id="inputs-row">
+            <div>
+                <label for="input-a">Número a:</label>
+                <input type="text" id="input-a" placeholder="Ej. 10">
+            </div>
+            <div id="input-b-container">
+                <label for="input-b">Número b:</label>
+                <input type="text" id="input-b" placeholder="Ej. 5">
+            </div>
+        </div>
+
+        <p class="small-text">
+            Nota: las funciones trigonométricas usan <strong>grados</strong>.
+        </p>
+
+        <button id="btn-calcular">Calcular</button>
+
+        <div id="mensaje-error" class="error"></div>
+        <div id="resultado" class="result-box hidden"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
